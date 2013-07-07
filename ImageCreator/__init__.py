@@ -19,7 +19,7 @@ class ImageCreator:
 		if (now - self.last_img >= self.IMAGE_FREQUENCY):
 			# Record previous state
 			fn = self.createFilename()
-			subprocess.call(["/opt/vc/bin/raspistill", "-br", "65", "-o", fn]);
+			subprocess.call(["/opt/vc/bin/raspistill", "-w", "1024", "-h", "768", "-br", "65", "-o", fn]);
 			self.last_img = now
 			print("Image created at" + time.strftime("%Y-%m-%d %H:%M:%S") + ": " + fn)
 			return fn
