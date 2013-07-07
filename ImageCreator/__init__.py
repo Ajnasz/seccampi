@@ -3,7 +3,7 @@ import subprocess
 
 class ImageCreator:
 
-	IMAGE_FREQUENCY=45
+	IMAGE_FREQUENCY=30
 	IMAGE_FOLDER="/storage/pic/"
 
 	def __init__(self):
