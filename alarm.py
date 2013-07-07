@@ -30,6 +30,7 @@ current_State = 0
 Previous_State = 0
 last_img = 0
 
+IMAGE_UPLOAD_ENABLED = False
 
 import PicUploader
 import ImageCreator
@@ -59,7 +60,7 @@ try:
 			print("	Motion detected!")
 
 			fn = imageCreator.createImage()
-			if (fn != ''):
+			if (IMAGE_UPLOAD_ENABLED and fn != ''):
 				picUploader.upload(fn)
 
 			Previous_State=1
